@@ -1,0 +1,11 @@
+{
+    "Filmes": [
+        {
+            "id": "1",
+            "name": "Filme 1",
+            "description": "Descrição do filme 1",
+            "author": "Autor do filme 1",
+            "duration": "02:20:00"
+        }
+    ]
+}
