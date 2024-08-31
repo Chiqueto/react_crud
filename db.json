@@ -11,14 +11,14 @@
     {
       "id": "2",
       "name": "Filme 2",
-      "description": "Descrição do filme 2",
+      "description": "Descrição do filme 1",
       "author": "Autor do filme 2",
       "duration": "01:20:00",
       "publishment_year": 2023
     },
     {
       "id": "86d0",
-      "name": "FilmeInserido",
+      "name": "FilmeInserido2",
       "description": "Teste",
       "author": "TesteAutor",
       "duration": "02:00",

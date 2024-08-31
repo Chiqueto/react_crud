@@ -72,7 +72,7 @@ const MovieForm = () => {
           <input type="time" name="duration" id="duration" value={movie.duration} onChange={handleChange}/>
           <label htmlFor="publishment_year">Ano de publicação</label>
           <input type="number" name="publishment_year" id="publishment_year" value={movie.publishment_year} onChange={handleChange}/>
-          <button type="submit"> Adicionar </button>
+          <button type="submit"> {id ? 'Editar' : 'Adicionar'} </button>
         </form>
     </div> );
 }
