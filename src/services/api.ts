@@ -5,7 +5,7 @@ const api = axios.create({
 });
 
 export const getMovies = () => api.get('/Movies');
-export const getMoviesById = (id: string) => api.get(`/movies/${id}`);
-export const createMovie = (movie: any) => api.post('/movies', movie);
-export const updateMovie = (id: string, movie: any) => api.put(`/movies/${id}`, movie);
-export const deleteMovie = (id: string) => api.delete(`/movie/${id}`);
+export const getMoviesById = (id: string) => api.get(`/Movies/${id}`);
+export const createMovie = (movie: any) => api.post('/Movies', movie);
+export const updateMovie = (id: string, movie: any) => api.put(`/Movies/${id}`, movie);
+export const deleteMovie = (id: string) => api.delete(`/Movies/${id}`);

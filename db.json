@@ -1,21 +1,28 @@
 {
-    "Movies": [
-        {
-            "id": "1",
-            "name": "Filme 1",
-            "description": "Descrição do filme 1",
-            "author": "Autor do filme 1",
-            "duration": "02:20:00",
-            "publishment_year": 2024
-        },
-
-        {
-            "id": "2",
-            "name": "Filme 2",
-            "description": "Descrição do filme 2",
-            "author": "Autor do filme 2",
-            "duration": "01:20:00",
-            "publishment_year": 2023
-        }
-    ]
+  "Movies": [
+    {
+      "id": "1",
+      "name": "Filme 1",
+      "description": "Descrição do filme 1",
+      "author": "Autor do filme 1",
+      "duration": "02:20:00",
+      "publishment_year": 2024
+    },
+    {
+      "id": "2",
+      "name": "Filme 2",
+      "description": "Descrição do filme 2",
+      "author": "Autor do filme 2",
+      "duration": "01:20:00",
+      "publishment_year": 2023
+    },
+    {
+      "id": "86d0",
+      "name": "FilmeInserido",
+      "description": "Teste",
+      "author": "TesteAutor",
+      "duration": "02:00",
+      "publishment_year": "2013"
+    }
+  ]
 }
