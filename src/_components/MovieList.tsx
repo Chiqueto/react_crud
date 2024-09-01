@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getMovies } from "../services/api";
+import { deleteMovie, getMovies } from "../services/api";
+import { Link } from "react-router-dom";
 
 interface Movie{
     id: string,
@@ -21,6 +22,11 @@ const MovieList = () => {
         setMovies(response.data)
     }
 
+    const HandleDelete = async(id:string) => {
+        await deleteMovie(id)
+        loadMovies()
+    }
+
     return ( 
         <ul>
             {movies.map((movie) => (
@@ -28,10 +34,9 @@ const MovieList = () => {
                     <p>{movie.name}, {movie.publishment_year}</p>
                     <p>{movie.author}, {movie.duration}</p>
                     <textarea value={movie.description} readOnly></textarea>
-                    <div><button>Editar</button> <button>Excluir</button></div>
+                    <div><Link to={`/edit/${movie.id}`}>Editar</Link> <button onClick={() => HandleDelete(movie.id)}>Excluir</button></div>
                 </li>
             ))}
-            
         </ul>
      );
 }
