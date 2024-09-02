@@ -28,13 +28,14 @@ const MovieList = () => {
     }
 
     return ( 
-        <ul>
+        <ul className="container">
             {movies.map((movie) => (
                 <li key={movie.id}>
                     <p>{movie.name}, {movie.publishment_year}</p>
-                    <p>{movie.author}, {movie.duration}</p>
+                    <p>{movie.author},</p>
+                    <p>Duração: {movie.duration}</p>
                     <textarea value={movie.description} readOnly></textarea>
-                    <div><Link to={`/edit/${movie.id}`}>Editar</Link> <button onClick={() => HandleDelete(movie.id)}>Excluir</button></div>
+                    <div className="actions"><Link to={`/edit/${movie.id}`}>Editar</Link> <button onClick={() => HandleDelete(movie.id)}>Excluir</button></div>
                 </li>
             ))}
         </ul>

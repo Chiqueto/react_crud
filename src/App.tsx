@@ -1,4 +1,3 @@
-import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import AddMovie from './pages/AddMovie'
 import EditMovie from './pages/EditMovie'

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { createMovie, getMoviesById, updateMovie } from "../services/api";
 
 interface Movie{
@@ -60,8 +60,9 @@ const MovieForm = () => {
     }
 
     return ( 
-    <div>
+    <div className="container">
         <form  onSubmit={handleSubmit}>
+          <Link className="back" to={'/'}>Voltar</Link>   
           <label htmlFor="name">Nome do filme</label>
           <input type="text" name="name" id="name" value={movie.name} onChange={handleChange}/>
           <label htmlFor="description">Descrição</label>
