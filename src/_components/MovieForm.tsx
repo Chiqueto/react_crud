@@ -47,12 +47,16 @@ const MovieForm = () => {
     const handleSubmit = async(e:React.FormEvent) => {
         e.preventDefault()
         try{
-             if(id)  {
-                await updateMovie(id, movie)
-            }else {
-                await createMovie(movie)
+            if(!movie.name || !movie.description || !movie.author || !movie.duration || !movie.publishment_year) {
+                alert('Preencha todos os campos')
+            }else{
+                if(id)  {
+                    await updateMovie(id, movie)
+                }else {
+                    await createMovie(movie)
+                }
+                navigate('/')
             }
-            navigate('/')
         } catch(error) {
             console.error('Error saving movie', error)
         }
@@ -62,7 +66,7 @@ const MovieForm = () => {
     return ( 
     <div className="container">
         <form  onSubmit={handleSubmit}>
-          <Link className="back" to={'/'}>Voltar</Link>   
+         <Link className="back" to={'/'}>Voltar</Link>   
           <label htmlFor="name">Nome do filme</label>
           <input type="text" name="name" id="name" value={movie.name} onChange={handleChange}/>
           <label htmlFor="description">Descrição</label>

@@ -1,50 +1,29 @@
-# React + TypeScript + Vite
+# Inicialização do projeto
+Para inicializar o projeto utilizamos vite, com o comando:
+  npm create vite@latest nome-do-projeto --template react-ts
+  Selecionamos react + typescript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  depois instalamos as dependencias necessárias com o npm install
+  as dependencias são Axios, react-router-dom 
 
-Currently, two official plugins are available:
+  depois criamos um arquivo db.json para utilizar com o json-server
+  
+  e utilizamos o comando npm json-server --watch db.json --port 3001
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  O próximo passo foi criar as API's que utilizariamos, para isso criamos uma pasta services
+  dentro de src e nela criamos um arquivo api.ts e dentro desse arquivo
+  importamos a biblioteca axios instalada previamente, e criamos as rotas
+  e exportamos as rotas para podermos utiliza-las globalmente
 
-## Expanding the ESLint configuration
+# Configuração das rotas
+  No arquivo app.tsx configuramos as rotas de navegação, passando o
+  caminho que deve ser passado na url para acessar cada página
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Criação dos componentes
+  Criamos uma pasta components para componentizar nossa aplicação
+  e nos componentes criamos a lista de filmes e o formulário de inserção
+  depois criamos uma pasta pages que será o destino das nossas rotas de navegação
+  criadas no arquivo app.tsx
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+# Estilização
+  Por fim estilizamos nosso conteúdo através do CSS

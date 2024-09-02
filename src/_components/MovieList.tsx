@@ -35,7 +35,7 @@ const MovieList = () => {
                     <p>{movie.author},</p>
                     <p>Duração: {movie.duration}</p>
                     <textarea value={movie.description} readOnly></textarea>
-                    <div className="actions"><Link to={`/edit/${movie.id}`}>Editar</Link> <button onClick={() => HandleDelete(movie.id)}>Excluir</button></div>
+                    <div className="actions"><Link to={`/edit/${movie.id}`}>Editar</Link> <button onClick={() => confirm('Tem certeza que deseja deletar permanentemente esse registo?') && HandleDelete(movie.id) }  >Excluir</button></div>
                 </li>
             ))}
         </ul>

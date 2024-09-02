@@ -1,14 +1,6 @@
 {
   "Movies": [
     {
-      "id": "f873",
-      "name": "teste",
-      "description": "teste",
-      "author": "teste",
-      "duration": "00:00",
-      "publishment_year": "2020"
-    },
-    {
       "id": "b5ff",
       "name": "Filme 2",
       "description": "meu filme 2",
